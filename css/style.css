@@ -36,7 +36,7 @@ header .navbar-nav a{
 header .navbar-nav li:last-of-type a{
     border-bottom: none;
 }
-header .navbar-nav li:active a,
+header .navbar-nav li.active a,
 header .navbar-nav li:hover a{
     background: #000;
     color: #fff!important;
@@ -56,23 +56,23 @@ header .navbar-nav li:hover a{
     transition: 0.5s linear;
 }
 .news .news-item figure:hover img{
-    transform: scale (1.1);
-  }
-  .news-header h2{
+    transform: scale(1.1);
+}
+.news-header h2{
       line-height: 3rem;
       letter-spacing: -1px;
      
-  }
-  .news-header h2 a{
+}
+.news-header h2 a{
       color: #000;
       text-decoration: none;
   }
-  .news-header p.small{
+.news-header p.small{
       font-family: 'Arial-ItalicMT';
       color: #2e2e2e;
       font-size: 12px !important;
   }
-  .news-header p.small:before{
+.news-header p.small:before{
     content: '';
     display: inline-block;
     width: 12px;
@@ -83,7 +83,7 @@ header .navbar-nav li:hover a{
     top: -3px;
     
   }
-  .news-header .comments-number{
+.news-header .comments-number{
     width: 44px;
     height: 42px;
     background: url(assets/comments.png) no-repeat center center;
@@ -93,15 +93,15 @@ header .navbar-nav li:hover a{
     text-align: center;
     line-height: 30px;
   }
-  .news-item-description p ~ p{
+.news-item-description p ~ p{
     display: none;  
   }
-  .news-item-description p{
+.news-item-description p{
       line-height: 1.4rem;
       max-height: 7rem;
       overflow: hidden;
   }
-  .news .news-item .read-more{
+.news .news-item .read-more{
       color: #e9e9e9;
       font-size: 12px;
       line-height: 18px;
@@ -112,7 +112,7 @@ header .navbar-nav li:hover a{
       text-decoration: none;
       transition: 0.5s linear;
   }
-  .news .news-item .read-more:after{
+.news .news-item .read-more:after{
       content: '';
       display: block;
       width: 32px;
@@ -123,41 +123,45 @@ header .navbar-nav li:hover a{
       border: 16px solid transparent;
       border-left-color: #616161;
   }
-  .news .news-item .read-more:hover{
+.news .news-item .read-more:hover{
       margin-left: 3px;
   }
   
   
   /*news navigation*/
-  .news-navigation a{
+.news-navigation a{
       text-decoration: none;
       color: #4d4d4d;
       font-size: 16px;
       font-family: 'Arial-BoldMT'; 
   }
-  .news-navigation > span{
+.news-navigation > span{
       color: #4d4d4d;
       font-size: 22px;
       padding: 0 15px;
       display: inline-block;
   }
-  .news-navigation a:hover{
+.news-navigation a:hover{
       color: #000;
       text-shadow: 0 0 1px #4d4d4d;
   }
-  .social a{
+.social a{
       color: #000;
       font-size: 32px;
       text-decoration: none;
   }
-  .search-form .form-control{
+.search-form .form-control{
       border-radius: 0;
       background: #f7f7f7;
   }
-  .top-articles .top-articles-item img{
+.search-form .form-control:focus{
+   border:1px solid #8B8A8A;
+   box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+.top-articles .top-articles-item img{
       border: 5px solid #444;
   }
-  .top-articles .top-articles-item .w-75 a{
+.top-articles .top-articles-item .w-75 a{
       text-decoration: none;
       line-height: 1.5rem;
       max-height: 3rem;
@@ -165,20 +169,162 @@ header .navbar-nav li:hover a{
       padding-left: 5px;
       display: block;
   }
-  .recent-comments-item .w-75{
+.recent-comments-item .w-75{
       white-space: nowrap;
       overflow:hidden;
       text-overflow: ellipsis;
   }
-  .recent-comments p{
+.recent-comments p{
       font-size: 12px;
       border-top: 1px solid #ccc;
   }
-  .recent-comments p:last-of-type{
+.recent-comments p:last-of-type{
       border-bottom: 1px solid #ccc;
   }
-  .recent-comments a{
+.recent-comments .recent-comments-item .w-25{
       white-space: nowrap;
       overflow:hidden;
       text-overflow: ellipsis; 
   }
+  
+/*single news start*/
+
+.single-news{
+    padding: 0 0 30px;
+    border-bottom: 1px dotted #9a9a9a;
+}
+.single-news .single-news-content h1,
+.single-news .single-news-content h2,
+.single-news .single-news-content h3,
+.single-news .single-news-content h4,
+.single-news .single-news-content h5,
+.single-news .single-news-content h6{
+    font-family: 'ArialMT';
+    color: #252525;
+    letter-spacing: 1px;
+}
+
+
+.single-news-content ul{
+    list-style: none;
+    
+}
+.single-news-content ul li:before{
+    content:'';
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url('assets/puzzle.jpg') no-repeat center;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+.single-news-content blockquote{
+    background: #EFEFEF;
+    font-family: 'Arial-ItalicMT';
+    padding: 20px 20px 20px 50px;
+    width: 90%;
+    margin: 0 auto 15px;
+    color:#8B8A8A;
+    position: relative;
+}
+
+.single-news-content blockquote:before{
+    content: '“';
+    font-family: 'ArialMT';
+    color:#fff;
+    font-size: 120px;
+    position: absolute;
+    top:-35px;
+    left: 5px;
+}
+
+
+.comments .comments-item{
+    border:1px solid rgba(213,213,213,0.54);
+    background: #f8f8f8;
+}
+
+.comments .comments-item:nth-of-type(even){
+    background: white;
+}
+
+.comments .comments-author{
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.comments .comments-content{
+    flex-basis: 70%;
+    max-width: 70%;
+}
+
+.comments .comments-author img{
+    border-radius: 4px;
+    border:3px solid #bfbfbf;
+}
+
+.comments .comments-author-name{
+    font-family: 'Arial-BoldMT';
+   color:#515151;
+}
+
+
+
+.add-comment{
+    border:1px solid rgba(213,213,213,0.54);
+    background: #f8f8f8;
+}
+
+.add-comment .form-control{
+    border-radius: 0;
+    background: #fff;
+}
+
+.add-comment .form-control:focus{
+    box-shadow: 0 0 1px rgba(0,0,0,0.4);
+    border-color: #ced4da;
+}
+
+.add-comment textarea{
+    resize: none;
+}
+
+.add-comment .btn{
+    border-radius: 0;
+}
+
+
+footer{
+    border-top: 1px dotted #8B8A8A;
+}
+
+footer ul li,
+footer ul li:first-of-type a,
+footer ul li:first-of-type a:hover
+{
+    font-family: 'Arial-BoldMT';
+    color:#6d6d6d;
+    font-size: 16px;
+
+}
+
+footer ul li a, footer ul li a:hover{
+   font-family: 'ArialMT';
+   color:#6d6d6d;
+   font-size: 16px;
+   text-decoration: none;
+   transition: 0.5s ease;
+   display: block;
+}
+
+footer ul li a:hover{
+    padding-left: 5px;
+}
+
+
+footer .footer-about h5 a{
+    text-decoration:none;
+    color:#000;
+    font-family: 'Arial-BoldMT';
+}  
